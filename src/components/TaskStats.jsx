@@ -1,8 +1,11 @@
-
-const TaskStats = () => {
+const TaskStats=({ total, completed, pending })=> {
   return (
-    <div>TaskStats</div>
-  )
+    <section>
+      <p>Total: {total}</p>
+      <p>Completed: {completed}</p>
+      <p>Pending: {pending}</p>
+    </section>
+  );
 }
 
-export default TaskStats
+export default TaskStats;

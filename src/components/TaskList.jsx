@@ -1,8 +1,16 @@
+import TaskCard from "./TaskCard";
 
-const TaskList = () => {
+const TaskList=({ tasks })=> {
   return (
-    <div>TaskList</div>
-  )
+    <section>
+      {tasks.map((task) => (
+        <TaskCard
+          key={task.id}
+          task={task}
+        />
+      ))}
+    </section>
+  );
 }
 
-export default TaskList
+export default TaskList;

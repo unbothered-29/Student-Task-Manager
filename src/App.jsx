@@ -1,8 +1,62 @@
+import { useState } from "react";
+import Header from "./components/Header"
+// import TaskCard from "./components/TaskCard";
+import TaskList from "./components/TaskList";
+import TaskStats from "./components/TaskStats";
 
 const App = () => {
+const initialTasks = [
+  {
+    id: 1,
+    title: "Revise React state",
+    category: "Revision",
+    completed: false
+  },
+  {
+    id: 2,
+    title: "CN assignment 1",
+    category: "Assignment",
+    completed: false
+  },
+  {
+    id: 3,
+    title: "SMLDS Experiments",
+    category: "Experiments",
+    completed: false
+  },
+  {
+    id: 4,
+    title: "Unit Test study",
+    category: "Study",
+    completed: false
+  },
+  {
+    id: 5,
+    title: "Revise WMC",
+    category: "Revision",
+    completed: false
+  },
+];
+
+const [tasks, settasks] = useState(initialTasks);
+
+const completedCount = tasks.filter(
+  (task) => task.completed
+).length;
+
+const pendingCount = tasks.length - completedCount;
+
   return (
-    <div>Student Task Manager </div>
-  )
+    <div>
+      <Header />
+      <TaskList tasks={tasks} />
+      <TaskStats
+         total={tasks.length}
+         completed={completedCount}
+         pending={pendingCount}
+       />
+    </div>
+  );
 }
 
 export default App
