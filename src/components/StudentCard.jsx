@@ -10,5 +10,4 @@ const StudentCard = ({stu}) => {
     </div>
   )
 }
-
 export default StudentCard;
