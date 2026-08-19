@@ -3,11 +3,12 @@ const StudentCard = ({stu}) => {
   return (
     <div>
         {stu.map(()=>{
-            key:{student.id}
+            key:{stu.id},
+            dept:{stu.dept},
         })
 
 }
     </div>
   )
 }
-export default StudentCard
+export default StudentCard;
