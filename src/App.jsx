@@ -38,6 +38,27 @@ const initialTasks = [
   },
 ];
 
+const student=[
+{
+  id:1,
+  name:"Jessicaa",
+  "sem":5,
+  "dept":"AI&DS"
+},
+{
+  id:2,
+  name:"Yug",
+  "sem":7,
+  "dept":"Comps"
+},
+{
+  id:3,
+  name:"Shruti",
+  "sem":5,
+  "dept":"AI&DS"
+},
+];
+
 const [tasks, settasks] = useState(initialTasks);
 
 const completedCount = tasks.filter(
