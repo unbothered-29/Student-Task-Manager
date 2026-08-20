@@ -3,6 +3,7 @@ import Header from "./components/Header"
 // import TaskCard from "./components/TaskCard";
 import TaskList from "./components/TaskList";
 import TaskStats from "./components/TaskStats";
+import StudentCard from "./components/StudentCard";
 
 const App = () => {
 const initialTasks = [
@@ -76,8 +77,13 @@ const pendingCount = tasks.length - completedCount;
          completed={completedCount}
          pending={pendingCount}
        />
+       <StudentCard
+       name={student.name}
+       >
+
+       </StudentCard>
     </div>
   );
 }
 
-export default App;
+export default App

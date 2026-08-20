@@ -4,9 +4,12 @@ const StudentCard = ({stu}) => {
     <div>
         {
         stu.map((stud)=>{
-           <li key={stud}>{stud}</li>
+           <li key={stud}>{stud}</li>;
+           <h2>{stud}</h2>
         })
 }
+
+
     </div>
   )
 }
