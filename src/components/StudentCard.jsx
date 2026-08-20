@@ -2,11 +2,10 @@
 const StudentCard = ({stu}) => {
   return (
     <div>
-        {stu.map(()=>{
-            key:{stu.id},
-            dept:{stu.dept},
+        {
+        stu.map((stud)=>{
+           <li key={stud}>{stud}</li>
         })
-
 }
     </div>
   )
