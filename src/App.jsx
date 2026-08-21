@@ -86,4 +86,4 @@ const pendingCount = tasks.length - completedCount;
   );
 }
 
-export default App
+export default App;
