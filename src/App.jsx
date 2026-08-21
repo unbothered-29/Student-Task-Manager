@@ -83,7 +83,7 @@ const pendingCount = tasks.length - completedCount;
 
        </StudentCard>
     </div>
-  );
+  )
 }
 
 export default App;
